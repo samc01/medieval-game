@@ -1,12 +1,22 @@
-import {getRandomNumber, getDice} from "./utils.js"
+import {getDice} from "./utils.js"
 
 class Character {
     constructor(data) {
         Object.assign(this, data)
     }
 
+    getCharacterHtml() {
+        const { name, img, healthPoints, diceCount, diceScores } = this
+        return `<h1>${name}</h1>
+                <img src=${img}>
+                <p>Health: ${healthPoints}</p>
+                <div id="dice-container">
+                    ${this.getDicePlaceholders()}
+                </div>`
+    }
+
     getDicePlaceholders() {
-        return newArray(this.diceCount).map(() => {
+        return new Array(this.diceCount).fill(0).map(() => {
             return `<div class="dice"></div>`
         }).join("")
     }

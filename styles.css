@@ -28,6 +28,11 @@ p {
     text-align: left;
 }
 
+.dice {
+    color: black;
+    font-weight: bold;
+}
+
 /* LAYOUT */
 
 #hero, 
@@ -53,8 +58,7 @@ p {
     margin-left: 1em;
 }
 
-#dice-container-hero,
-#dice-container-monster {
+#dice-container {
     background-color: #C6C013;
     display: flex;
     justify-content: center;
@@ -67,9 +71,12 @@ p {
 .dice {
     border: 1px solid whitesmoke;
     border-radius: 5px;
-    height: 6vh;
-    width: 6vh;
+    width: 5vh;
+    height: 5vh;
+    line-height: 6vh;
     margin: 1em;
+    padding: 0.2em;
+    background-color: whitesmoke;
 }
 
 button {

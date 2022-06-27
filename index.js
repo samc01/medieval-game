@@ -7,4 +7,8 @@ const goblin = new Character(characterData.goblin)
 const demon = new Character(characterData.demon)
 
 
-document.getElementById("dice-container-hero").innerHTML = "<p>hello</p>"
+document.getElementById("hero").innerHTML = wizard.getCharacterHtml()
+document.getElementById("monster").innerHTML = orc.getCharacterHtml()
+document.getElementById("btn").addEventListener("click", () => {
+    
+})
