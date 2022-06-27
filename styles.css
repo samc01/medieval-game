@@ -1,0 +1,82 @@
+body {
+    background-color: #008148;
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* TYPOGRAPHY */
+
+body {
+    font-family: 'MedievalSharp', cursive;    
+    color: whitesmoke;
+    text-align: center;;
+}
+
+button {
+    font-family: inherit;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    font-weight: bold;;
+}
+
+p {
+    font-weight: bold;
+    text-align: left;
+}
+
+/* LAYOUT */
+
+#hero, 
+#monster {
+    max-width: 50%;
+    margin: 1.5em auto;
+    background-color: #034732;
+    border-radius: 10px;
+    border: 1px solid #C6C013;
+}
+
+h1 {
+    margin: 0.3em 0;
+}
+
+img {
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 10px;;
+}
+
+p {
+    margin-left: 1em;
+}
+
+#dice-container-hero,
+#dice-container-monster {
+    background-color: #C6C013;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5em;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+
+.dice {
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    height: 6vh;
+    width: 6vh;
+    margin: 1em;
+}
+
+button {
+    padding: 0.5em 1em;
+    background-color: #EF2917;
+    border: 2px solid #EF8A17;
+    border-radius: 10px;
+    margin-bottom: 1.5em;
+    cursor: pointer;
+}
