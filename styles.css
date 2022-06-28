@@ -31,12 +31,12 @@ p {
 .dice {
     color: black;
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 /* LAYOUT */
 
-#hero, 
-#monster {
+.card {
     max-width: 50%;
     margin: 1.5em auto;
     background-color: #034732;
@@ -71,9 +71,9 @@ p {
 .dice {
     border: 1px solid whitesmoke;
     border-radius: 5px;
-    width: 4vh;
-    height: 4vh;
-    line-height: 5vh;
+    width: 3vh;
+    height: 3vh;
+    line-height: 4vh;
     margin: 1em;
     padding: 0.2em;
     background-color: whitesmoke;
