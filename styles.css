@@ -37,7 +37,7 @@ p {
 /* LAYOUT */
 
 .card {
-    max-width: 50%;
+    max-width: 200px;
     margin: 1.5em auto;
     background-color: #034732;
     border-radius: 10px;
@@ -86,4 +86,17 @@ button {
     border-radius: 10px;
     margin-bottom: 1.5em;
     cursor: pointer;
+}
+
+.outside-bar {
+    height: 8px;
+    background-color: rgb(82, 74, 64);
+    margin: 0 0.5em;
+    border-radius: 10px;
+}
+
+.inside-bar {
+    height: 8px;
+    background-color: blue;
+    border-radius: 10px;
 }

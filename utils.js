@@ -8,4 +8,8 @@ function getDice(diceCount) {
     })
 }
 
-export {getRandomNumber, getDice}
+function getPercentage(number, total) {
+    return number * 100 / total
+}
+
+export {getRandomNumber, getDice, getPercentage}

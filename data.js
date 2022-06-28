@@ -17,14 +17,14 @@ const characterData = {
         name: 'goblin',
         img: "./images/goblin.jpg",
         healthPoints: 20,
-        diceCount: 1,
+        diceCount: 2,
         diceScores: []
     },
     demon: {
         name: 'demon',
         img: "./images/demon.jpg",
         healthPoints: 30,
-        diceCount: 2,
+        diceCount: 3,
         diceScores: []
     }
 }

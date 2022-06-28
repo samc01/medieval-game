@@ -32,33 +32,25 @@ function attack() {
 
     render()
 
-    if (monster.healthPoints === 0) {
-        monster = getNextMonster()
+    if (wizard.healthPoints === 0) {
         setWinnerDisplay()
-    } 
-
+    } else if (monster.healthPoints === 0) {
+        if (monstersArray.length > 0) {
+            monster = getNextMonster()
+            render()
+        } else {
+            setWinnerDisplay()
+        }
+    }
 }
 
 function setWinnerDisplay() {
-    let endMessage = "a"
-    let endEmoji = "a"
+    const endMessage = wizard.healthPoints === 0 && monster.healthPoints === 0 ?
+        "No one has won!" : wizard.healthPoints > 0 ? 
+            "The wizard has won!" : "The monsters have won!"
 
-    if (wizard.healthPoints === 0 && monster.healthPoints === 0) {
-        endMessage = "No one has won!"
-        endEmoji = ""
-    }
-    else if (monster.healthPoints === 0) {
-        endMessage = "Monsters has won!"
-        endEmoji = "☠️"
-    } else if (wizard.healthPoints === 0) {
-        endMessage = "Wizard has won!"
-        endEmoji = "🔮"
-    }  
+    const endEmoji = wizard.healthPoints > 0 ? "🔮" : "☠️"
 
-    setWinnerDisplayHtml(endMessage, endEmoji)
-}
-
-function setWinnerDisplayHtml(endMessage, endEmoji) {
     document.body.innerHTML = `<h2>Game Over</h2>
                                 <h3>${endMessage}</h3>
                                 <h3>${endEmoji}</h3>`

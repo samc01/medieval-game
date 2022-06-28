@@ -1,21 +1,29 @@
-import {getDice} from "./utils.js"
+import {getDice, getPercentage} from "./utils.js"
 
 class Character {
     constructor(data) {
         Object.assign(this, data)
         this.diceHtml = this.getDicePlaceholders(this.diceCount)
         this.damage = 0
+        this.maxHealthPoints = this.healthPoints
+        this.healthBar = this.getHealthPercentage()
+    }
+
+    getHealthPercentage() {
+        let percent = getPercentage(this.healthPoints, this.maxHealthPoints)
+        return `<div class="outside-bar">
+                    <div class="inside-bar" width=${percent}></div>
+                </div>`
     }
 
     takeDamage(dmg) {
-
         if (dmg >= this.healthPoints) {
             this.healthPoints = 0
         } else {
             this.healthPoints -= dmg
         }  
     }
-    
+
     setDamage() {
         this.damage = this.diceScores.reduce((currentValue, nextValue) => {
             return currentValue + nextValue
@@ -23,11 +31,12 @@ class Character {
     }
 
     getCharacterHtml() {
-        const { name, img, healthPoints, diceCount, diceScores, diceHtml } = this
+        const { name, img, healthPoints, diceCount, diceScores, diceHtml, healthBar } = this
         return `<div class="card">
                     <h1>${name}</h1>
                     <img src=${img}>
                     <p>Health: ${healthPoints}</p>
+                    ${healthBar}
                     <div id="dice-container">
                         ${diceHtml}
                     </div>
