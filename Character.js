@@ -12,7 +12,8 @@ class Character {
     getHealthPercentage() {
         let percent = getPercentage(this.healthPoints, this.maxHealthPoints)
         return `<div class="outside-bar">
-                    <div class="inside-bar" width=${percent}></div>
+                    <div class="inside-bar" style="width:${percent}%; background-color:
+                        ${percent <= 20 ? "red" : "blue"}"></div>
                 </div>`
     }
 
@@ -22,6 +23,8 @@ class Character {
         } else {
             this.healthPoints -= dmg
         }  
+
+        this.healthBar = this.getHealthPercentage()
     }
 
     setDamage() {

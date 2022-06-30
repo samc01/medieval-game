@@ -30,18 +30,24 @@ function attack() {
     wizard.takeDamage(monster.damage)
     monster.takeDamage(wizard.damage)
 
-    render()
-
     if (wizard.healthPoints === 0) {
-        setWinnerDisplay()
+        document.getElementById("btn").style.display = "none"
+        setTimeout(setWinnerDisplay, 2000)
     } else if (monster.healthPoints === 0) {
         if (monstersArray.length > 0) {
-            monster = getNextMonster()
-            render()
+            document.getElementById("btn").style.display = "none"
+            setTimeout(() => { 
+                monster = getNextMonster()
+                render()
+                document.getElementById("btn").style.display = "inline-block"
+            }, 1500)
         } else {
-            setWinnerDisplay()
+            document.getElementById("btn").style.display = "none"
+            setTimeout(setWinnerDisplay, 2000)
         }
     }
+    
+    render()
 }
 
 function setWinnerDisplay() {
