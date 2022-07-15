@@ -1,1 +1,1 @@
-My take on the medieval game from Scrimba Frontend Developer Career Path!
+My take on the medieval game from Scrimba (https://scrimba.com/) Frontend Developer Career Path!
